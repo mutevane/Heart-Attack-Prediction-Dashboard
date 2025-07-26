@@ -13,8 +13,7 @@ import datetime
 st.set_page_config(page_title="Heart Attack Risk Predictor", layout="centered")
 
 ## LOAD MODEL
-MODEL_DIR = os.path.expanduser("~/Downloads")
-model = pickle.load(open(os.path.join(MODEL_DIR, "heart_attack_xgb_model.pkl"), 'rb'))
+model = pickle.load(open("Models/heart_attack_xgb_model.sav", 'rb'))
 
 ## VISITOR COUNTER 
 counter_file = "heart_visitors.pkl"
