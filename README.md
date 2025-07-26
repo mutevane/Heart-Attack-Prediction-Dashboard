@@ -1,5 +1,5 @@
 
-<h1 align="center">❤️ Heart Attack Risk Predictor</h1>
+<h1 align="center">❤️ Heart Attack Risk Estimator</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Built%20With-Streamlit-red?style=flat-square&logo=streamlit">
@@ -219,8 +219,8 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 ## 👤 Author
 
 **Your Name**  
-📬 Email: your.email@example.com  
-🌐 [GitHub](https://github.com/your-username) • [LinkedIn](https://linkedin.com/in/your-profile)
+📬 Email: eambuzi@gmail.com  
+🌐 [GitHub]([https://github.com/your-username](https://github.com/mutevane)) • [LinkedIn](https://linkedin.com/in/your-profile)
 
 ---
 
@@ -229,4 +229,4 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 - [Streamlit](https://streamlit.io/)
 - [XGBoost](https://xgboost.readthedocs.io/)
 - [SHAP](https://shap.readthedocs.io/)
-- Open-source heart health dataset
+- Kaggle - Open-source heart health dataset
