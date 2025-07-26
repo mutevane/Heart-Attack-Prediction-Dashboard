@@ -2,105 +2,165 @@
 <h1 align="center">❤️ Heart Attack Risk Predictor</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Built%20With-Streamlit-red?style=for-the-badge&logo=streamlit" />
-  <img src="https://img.shields.io/badge/Model-XGBoost-brightgreen?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Status-Production--Ready-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Built%20With-Streamlit-red?style=flat-square&logo=streamlit">
+  <img src="https://img.shields.io/badge/Model-XGBoost-green?style=flat-square&logo=scikit-learn">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Status-Production--Ready-brightgreen?style=flat-square">
 </p>
 
 <p align="center">
-🧠 A complete ML-powered tool to predict heart attack risk using real clinical data.<br>
-Built with ❤️ using XGBoost and Streamlit, featuring real-time insights, SHAP explainability,<br>
-and an interactive, modern UI.
+🧠 A complete machine learning pipeline that predicts heart attack risk using clinical features. <br>
+Built with data science best practices, optimized XGBoost model, and deployed via Streamlit.
 </p>
 
 ---
 
-## 🚀 Live Demo
+## 📍 Overview
 
-👉 Try the App (if hosted): [**Launch on Streamlit Cloud**](https://share.streamlit.io/your-username/heart-attack-predictor)
+Predict the **probability of a heart attack** using a smart web app powered by machine learning.  
+This tool helps raise awareness and supports early detection — especially for those at high risk.
 
----
-
-## 🧾 Full PDF Report
-
-📘 **[Download Full Report: Heart Attack Prediction.pdf](./Heart%20Attack%20Prediction.pdf)**
-
-Includes:
-- Data cleaning & EDA
-- Visualizations (KDEs, Boxplots, Heatmaps)
-- Feature analysis & correlation
-- Model training (10+ models)
-- Hyperparameter tuning
-- Evaluation metrics (accuracy, F1, AUC)
-- SHAP explainability & visualizations
+📌 **Key Highlights**:
+- 🧬 Based on clinical features like age, heart rate, blood pressure, troponin, and more
+- 🧠 Trained on 1,300+ real-world samples
+- 🏆 Uses XGBoost, one of the top-performing ML algorithms
+- 🎯 Achieves ~98.5% accuracy
+- 🔎 Enhanced interpretability via SHAP explainability
+- 🌐 Web deployment using Streamlit
 
 ---
 
-## 🧬 Features Used
+## 🗂️ Contents
 
-| Feature               | Description                              |
-|-----------------------|------------------------------------------|
-| Age                  | Patient age                              |
-| Gender               | 0 = Female, 1 = Male                      |
-| Heart Rate           | Beats per minute                         |
-| Systolic BP          | Upper blood pressure                     |
-| Diastolic BP         | Lower blood pressure                     |
-| Blood Sugar          | mmol/L unit                              |
-| CK-MB                | Enzyme level for cardiac injury          |
-| Troponin             | Protein marker indicating heart damage   |
+- 📄 Full Project Report (PDF)
+- 📊 Exploratory Data Analysis
+- ⚙️ Model Building
+- 📈 Performance Comparison
+- 🧠 SHAP Explainability
+- 🌐 Streamlit Web App
+- 🛠 How to Run Locally
+- 📁 Project Structure
 
 ---
 
-## 📈 Model Performance
+## 📄 Project Report
 
-| Model                   | Accuracy | F1 Score | Notes                        |
-|-------------------------|----------|----------|------------------------------|
-| **✅ XGBoost (Deployed)** | 98.5%    | 0.984    | Final model used in app      |
-| Gradient Boosting       | 98.5%    | 0.984    | Strong ensemble              |
-| AdaBoost                | 98.5%    | 0.984    | Performs well with tuning    |
-| Random Forest           | 98.1%    | 0.980    | Highly interpretable         |
-| Stacking Classifier     | 98.5%    | 0.984    | Ensemble of top learners     |
-| Logistic Regression     | 71.2%    | 0.66     | Baseline model               |
-| KNN                     | 68.9%    | 0.67     | Sensitive to distance metric |
+🧾 All technical development, data analysis, and modeling decisions are documented here:
+
+📥 **Download: Heart Attack Prediction.pdf**
+
+**Report Covers:**
+- Dataset profiling and cleaning
+- Visual EDA and outlier detection
+- Feature engineering & transformations
+- Statistical testing (t-test, chi-square)
+- Model tuning & evaluation
+- SHAP-based explainability
+- Final model export
 
 ---
 
-## 🧠 Explainability with SHAP
+## 📊 Exploratory Data Analysis
 
-SHAP was used for feature importance and local interpretability.
+✅ Over 1,300 rows  
+✅ No missing values  
+✅ Visualized with `seaborn`, `matplotlib`, and `SHAP`
 
-📌 **Top Predictors**:
-- Troponin
-- CK-MB
+| Feature           | Distribution           | Notes                              |
+|------------------|------------------------|------------------------------------|
+| Age              | Normal (centered ~58)  | Risk ↑ after 50                    |
+| Heart Rate       | Outliers > 200 bpm     | Detected and managed               |
+| CK-MB & Troponin | Highly skewed          | Strong predictors of cardiac damage |
+| Gender           | Binary encoded         | 1 = Male, 0 = Female               |
+
+📌 Also includes:
+- Histograms & KDEs
+- Boxplots for outliers
+- Correlation heatmap
+- Target distribution
+
+---
+
+## ⚙️ Model Building
+
+A robust set of ML models was trained and fine-tuned using:
+
+- `GridSearchCV`, `RandomizedSearchCV`
+- Stratified 10-fold CV
+- `f1_macro`, `precision`, `recall` as scoring metrics
+
+📦 Models evaluated:
+- ✅ Logistic Regression
+- ✅ Decision Tree
+- ✅ Random Forest
+- ✅ XGBoost
+- ✅ Support Vector Machines (SVM)
+- ✅ K-Nearest Neighbors (KNN)
+- ✅ Gradient Boosting
+- ✅ AdaBoost
+- ✅ Voting Classifier (soft)
+- ✅ Stacking Classifier
+- ✅ SGD Classifier
+
+---
+
+## 🏁 Model Comparison
+
+| 🔢 Model              | 🎯 Accuracy | 🧠 F1 Score | ⚡ Notes                     |
+|----------------------|-------------|-------------|-----------------------------|
+| XGBoost (Best)       | 98.5%       | 0.984       | Deployed                    |
+| Gradient Boosting    | 98.5%       | 0.984       | Highly stable               |
+| AdaBoost             | 98.5%       | 0.984       | Great with shallow trees    |
+| Random Forest        | 98.1%       | 0.98        | Ensemble approach           |
+| Decision Tree        | 98.1%       | 0.98        | Tuned via GridSearch        |
+| Stacking Classifier  | 98.5%       | 0.984       | Best of all models          |
+| SVM                  | 78.8%       | 0.78        | Tuned poly kernel           |
+| Logistic Regression  | 71.2%       | 0.66        | Baseline model              |
+| KNN                  | 68.9%       | 0.67        | Weak generalization         |
+| SGD Classifier       | 81.4%       | 0.80        | Competitive linear baseline |
+
+✅ XGBoost was saved with `pickle` for use in the web application.
+
+---
+
+## 🧠 Model Explainability
+
+### 🔍 SHAP (SHapley Additive Explanations)
+
+SHAP was used to:
+- Visualize feature contributions
+- Provide global and local explanations
+- Identify key clinical drivers
+
+🌟 **Top Features:**
+- Troponin Level
+- CK-MB Level
 - Heart Rate
 - Age
+- Blood Pressure
 
-📊 SHAP summary and bar plots included in PDF.
-
----
-
-## 🌐 App Pages
-
-| Section        | Description                                  |
-|----------------|----------------------------------------------|
-| 🏠 Welcome      | Introduction and visitor count               |
-| 🧮 Prediction   | Input clinical data for real-time risk score |
-| 🤖 Recommendations | Lifestyle guidance and alerts         |
-| ❓ FAQ          | Explains biomarkers, model, usage            |
-| ⚠ Disclaimer   | Medical warning                              |
-| 📊 Analytics    | View visitor timestamps                      |
-
----
-
-## 🛠 Run Locally
-
-```bash
-git clone https://github.com/your-username/heart-attack-predictor.git
-cd heart-attack-predictor
-pip install -r requirements.txt
-streamlit run app.py
+📈 Generated with:
+```python
+shap.Explainer(model).shap_values(X_test)
 ```
+
+---
+
+## 🌐 Web Application
+
+🔧 Built with: **Streamlit**
+
+| Section        | Description                                      |
+|----------------|--------------------------------------------------|
+| 🏠 Welcome      | App intro, visitor count                        |
+| 🧮 Prediction   | Input clinical values and get instant risk score|
+| 🤖 Recommendations | Personalized tips based on input           |
+| ❓ FAQ          | Explains clinical terms (e.g., CK-MB, Troponin) |
+| ⚠ Disclaimer   | Not a substitute for professional diagnosis     |
+| 📈 Analytics    | Shows session-based visitor count and timestamps|
+
+💡 Supports `model.predict_proba()`  
+✔️ Categorizes risk: Low / Moderate / High
 
 ---
 
@@ -108,38 +168,65 @@ streamlit run app.py
 
 ```
 📦 Heart-Attack-Predictor
-├── app.py
-├── heart_attack_xgb_model.sav
-├── heart_visitors.pkl
-├── requirements.txt
-├── README.md
-└── Heart Attack Prediction.pdf
+├── app.py                        # Streamlit frontend
+├── heart_attack_xgb_model.sav   # Final XGBoost model (pickle)
+├── heart_visitors.pkl           # Visitor counter (local)
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+└── Heart Attack Prediction.pdf  # Full project report
 ```
 
 ---
 
-## ⚙️ Tech Stack
+## 🛠 Run Locally
 
-- Streamlit
-- XGBoost
-- Scikit-Learn
-- SHAP
-- Pandas / Seaborn / Matplotlib
+```bash
+# Clone the repository
+git clone https://github.com/your-username/heart-attack-predictor.git
+cd heart-attack-predictor
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the Streamlit app
+streamlit run app.py
+```
 
 ---
 
-## 👨‍💻 Author
+## ✅ Requirements
+
+```
+streamlit
+pandas
+numpy
+scikit-learn
+xgboost
+seaborn
+matplotlib
+shap
+streamlit-option-menu
+```
+
+---
+
+## 🔐 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## 👤 Author
 
 **Your Name**  
-📧 your.email@example.com  
-🔗 [LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/your-username)
+📬 Email: your.email@example.com  
+🌐 [GitHub](https://github.com/your-username) • [LinkedIn](https://linkedin.com/in/your-profile)
 
 ---
 
-## 📝 License
+## 🙏 Acknowledgements
 
-This project is licensed under the **MIT License**.
-
----
-
-> *For educational and informational purposes only. Not a substitute for professional medical advice.*
+- [Streamlit](https://streamlit.io/)
+- [XGBoost](https://xgboost.readthedocs.io/)
+- [SHAP](https://shap.readthedocs.io/)
+- Open-source heart health dataset
