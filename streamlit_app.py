@@ -40,7 +40,7 @@ with st.sidebar:
 
 ## WELCOME PAGE
 if selected == "Welcome":
-    st.markdown("<h1 style='text-align: center; color: crimson;'> Heart Attack Risk Estimator</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #28a745;'> Heart Attack Risk Estimator</h1>", unsafe_allow_html=True)
     st.success(f"👥 *Total Visitors:* {visitor_data['count']}")
     st.write("""
 This application leverages a trained machine learning model (XGBoost) to assess an individual's probability of experiencing a heart attack using key health indicators such as age, blood pressure, heart rate, and cardiac biomarkers.
@@ -56,7 +56,7 @@ It is designed to:
 ## PREDICTION PAGE
 elif selected == "Prediction":
     st.markdown(
-        "<h2 style='text-align: center; color: #1E90FF;'>🫪 Predict Heart Attack Risk</h2>", 
+        "<h2 style='text-align: center; color: #28a745;'>🫪 Predict Heart Attack Risk</h2>", 
         unsafe_allow_html=True
     )
     st.write("Please fill in the following medical details:")
