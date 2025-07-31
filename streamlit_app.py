@@ -119,9 +119,12 @@ elif selected == "Prediction":
 
         st.success("✅ Stay active, eat heart-healthy foods, avoid smoking, and get regular checkups.")
 
-## FAQ PAGE 
+# FAQ PAGE
 elif selected == "FAQ":
-    st.markdown("<h2 style='text-align: center;'>❓ Frequently Asked Questions</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<h2 style='text-align: center; color: #28a745;'>❓ Frequently Asked Questions</h2>",
+        unsafe_allow_html=True
+    )
 
     with st.expander("📌 What does this app do?"):
         st.write("This app predicts the probability of heart attack using machine learning based on key health parameters.")
@@ -137,8 +140,8 @@ elif selected == "FAQ":
 
     with st.expander("📌 What model is used in this app?"):
         st.write("This app uses the **XGBoost (Extreme Gradient Boosting)** model, a powerful and efficient machine learning algorithm. "
-        "It was selected after outperforming several other models based on key performance metrics such as **accuracy**, **recall**, "
-        "**precision**, **AUC**, and **F1 score** during model evaluation.")
+                 "It was selected after outperforming several other models based on key performance metrics such as **accuracy**, **recall**, "
+                 "**precision**, **AUC**, and **F1 score** during model evaluation.")
 
     with st.expander("📌 Is this app suitable for regular screening?"):
         st.write("Yes, but it must not replace regular clinical checkups.")
@@ -146,17 +149,23 @@ elif selected == "FAQ":
     with st.expander("📌 Who can benefit from using this app?"):
         st.write("Anyone at potential risk, especially those over 40, sedentary, or with family history of heart disease.")
 
-## DISCLAIMER PAGE
+# DISCLAIMER PAGE
 elif selected == "Disclaimer":
-    st.markdown("<h2 style='text-align: center;'>⚠ Disclaimer</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<h2 style='text-align: center; color: #28a745;'>⚠ Disclaimer</h2>",
+        unsafe_allow_html=True
+    )
     st.warning("""
 This tool is for informational purposes only and is not a substitute for professional healthcare.
 Predictions should not be used to make medical decisions without a physician's evaluation.
 """)
 
-## ANALYTICS PAGE
+# ANALYTICS PAGE
 elif selected == "Analytics":
-    st.markdown("<h2 style='text-align: center;'>📊 Visitor Analytics</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<h2 style='text-align: center; color: #28a745;'>📊 Visitor Analytics</h2>",
+        unsafe_allow_html=True
+    )
 
     st.info(f"👥 *Total Visitors:* {visitor_data['count']}")
 
