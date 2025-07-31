@@ -40,7 +40,7 @@ with st.sidebar:
 
 ## WELCOME PAGE
 if selected == "Welcome":
-    st.markdown("<h1 style='text-align: center; color: #28a745;'> Heart Attack Risk Estimator</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #0000FF;'> Heart Attack Risk Estimator</h1>", unsafe_allow_html=True)
     st.success(f"👥 *Total Visitors:* {visitor_data['count']}")
     st.write("""
 This application leverages a trained machine learning model (XGBoost) to assess an individual's probability of experiencing a heart attack using key health indicators such as age, blood pressure, heart rate, and cardiac biomarkers.
@@ -56,7 +56,7 @@ It is designed to:
 ## PREDICTION PAGE
 elif selected == "Prediction":
     st.markdown(
-        "<h2 style='text-align: center; color: #28a745;'>🫪 Predict Heart Attack Risk</h2>", 
+        "<h2 style='text-align: center; color: #0000FF;'>🫪 Predict Heart Attack Risk</h2>", 
         unsafe_allow_html=True
     )
     st.write("Please fill in the following medical details:")
@@ -122,7 +122,7 @@ elif selected == "Prediction":
 # FAQ PAGE
 elif selected == "FAQ":
     st.markdown(
-        "<h2 style='text-align: center; color: #28a745;'>❓ Frequently Asked Questions</h2>",
+        "<h2 style='text-align: center; color: #0000FF;'>❓ Frequently Asked Questions</h2>",
         unsafe_allow_html=True
     )
 
@@ -152,7 +152,7 @@ elif selected == "FAQ":
 # DISCLAIMER PAGE
 elif selected == "Disclaimer":
     st.markdown(
-        "<h2 style='text-align: center; color: #28a745;'>⚠ Disclaimer</h2>",
+        "<h2 style='text-align: center; color: #0000FF;'>⚠ Disclaimer</h2>",
         unsafe_allow_html=True
     )
     st.warning("""
@@ -163,7 +163,7 @@ Predictions should not be used to make medical decisions without a physician's e
 # ANALYTICS PAGE
 elif selected == "Analytics":
     st.markdown(
-        "<h2 style='text-align: center; color: #28a745;'>📊 Visitor Analytics</h2>",
+        "<h2 style='text-align: center; color: #0000FF;'>📊 Visitor Analytics</h2>",
         unsafe_allow_html=True
     )
 
