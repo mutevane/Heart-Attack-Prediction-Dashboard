@@ -55,7 +55,10 @@ It is designed to:
 
 ## PREDICTION PAGE
 elif selected == "Prediction":
-    st.markdown("<h2 style='text-align: center;'>🫪 Predict Heart Attack Risk</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<h2 style='text-align: center; color: #1E90FF;'>🫪 Predict Heart Attack Risk</h2>", 
+        unsafe_allow_html=True
+    )
     st.write("Please fill in the following medical details:")
 
     with st.form("heart_form"):
